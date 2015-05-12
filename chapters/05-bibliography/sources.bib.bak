@@ -29,6 +29,42 @@
   language    = "english"
 }
 
+@PHDTHESIS{4,
+    title    = "Wind map",
+  type     = "Electronic source",
+    url      = {http://hint.fm/wind/},
+  language = "english"
+}
+
+@article{5,
+  author    = {G. Scott Owen},
+  title     = {History of Visualization},
+  journal   = {ACM SIGGRAPH},
+  volume    = {13},
+  number    = {3},
+  year      = {1999},
+  pages     = {115-117},
+  ee        = {http://www.siggraph.org/education/materials/HyperVis/visgoals/visgoal3.htm},
+  bibsource = {DBLP, http://dblp.uni-trier.de}
+}
+
+@PHDTHESIS{6,
+ journal   = {Visual.ly},
+    title    = "Data Visualization Tools",
+  type     = "Electronic source",
+    url      = {http://visual.ly/learn/data-visualization-tools},
+  language = "english"
+}
+
+@Book{7,
+  author      = "Cairo A.",
+  title       = "The functional art: an introduction to information graphics and visualization ",
+    publisher = "New rider",
+  address ="New York, USA",
+  year        = "2013",
+  pages        = "180-217",
+  language    = "english"
+}
 @INPROCEEDINGS{CoMa2003,
  author       = "S. Coppock and L. Mazlack",
  title        = "Rough sets used in the measurement of similarity of mixed mode data",
