@@ -65,6 +65,16 @@
   pages        = "180-217",
   language    = "english"
 }
+
+@Book{8,
+  author      = "Катренко А.В.",
+  title       = "Сиситемний аналіз ",
+    publisher = "Комп’ютинґ",
+  address ="Львів",
+  year        = "2011",
+  pages        = "1-373",
+  language    = "українська"
+}
 @INPROCEEDINGS{CoMa2003,
  author       = "S. Coppock and L. Mazlack",
  title        = "Rough sets used in the measurement of similarity of mixed mode data",
