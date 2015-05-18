@@ -1,192 +1,142 @@
-@Book{1,
-  author = "Dianne Cook and Deborah F. Swayne",
-  title = "Interactive and Dynamic Graphics for Data Analysis",
-  publisher = "Springer US",
-  address ="New York, USA",
-  year = 2007,
-  numpages = 350,
-  language = "english"
+@comment{x-kbibtex-personnameformatting=<%f ><%l><, %s>}
+
+@book{1,
+	address = "New York, USA",
+	author = "Dianne Cook and Deborah F. Swayne",
+	language = "english",
+	numpages = 350,
+	publisher = "Springer US",
+	title = "Interactive and Dynamic Graphics for Data Analysis",
+	year = 2007
 }
 
-@Book{2,
-  author      = "Andrew Sears and Julie A. Jacko",
-  title       = "Human-Computer Interaction",
-  edition     = "2nd",  
-  publisher   = "Tailor&Francis Group",
-  year        = "2009",
-  numpages    = 352,
-  language    = "english"
+@book{2,
+	author = "Andrew Sears and Julie A. Jacko",
+	edition = "2nd",
+	language = "english",
+	numpages = 352,
+	publisher = "Tailor\&Francis Group",
+	title = "Human-Computer Interaction",
+	year = "2009"
 }
 
-@Book{3,
-  author      = "Alan Dix",
-  title       = "Human-Computer Interaction",
-  booktitle    = "Encyclopedia of Database Systems",
-  publisher = "Springer US",
-  address ="New York, USA",
-  year        = "2009",
-  pages        = "1327--1331",
-  language    = "english"
+@book{3,
+	address = "New York, USA",
+	author = "Alan Dix",
+	booktitle = "Encyclopedia of Database Systems",
+	language = "english",
+	pages = "1327--1331",
+	publisher = "Springer US",
+	title = "Human-Computer Interaction",
+	year = "2009"
 }
 
-@PHDTHESIS{4,
-    title    = "Wind map",
-  type     = "Electronic source",
-    url      = {http://hint.fm/wind/},
-  language = "english"
+@phdthesis{4,
+	language = "english",
+	title = "Wind map",
+	type = "Electronic source",
+	url = "http://hint.fm/wind/"
 }
 
 @article{5,
-  author    = {G. Scott Owen},
-  title     = {History of Visualization},
-  journal   = {ACM SIGGRAPH},
-  volume    = {13},
-  number    = {3},
-  year      = {1999},
-  pages     = {115-117},
-  ee        = {http://www.siggraph.org/education/materials/HyperVis/visgoals/visgoal3.htm},
-  bibsource = {DBLP, http://dblp.uni-trier.de}
+	author = "G. Scott Owen",
+	bibsource = "DBLP, http://dblp.uni-trier.de",
+	ee = "http://www.siggraph.org/education/materials/HyperVis/visgoals/visgoal3.htm",
+	journal = "ACM SIGGRAPH",
+	number = "3",
+	pages = "115--117",
+	title = "History of Visualization",
+	volume = "13",
+	year = "1999"
 }
 
-@PHDTHESIS{6,
- journal   = {Visual.ly},
-    title    = "Data Visualization Tools",
-  type     = "Electronic source",
-    url      = {http://visual.ly/learn/data-visualization-tools},
-  language = "english"
+@phdthesis{6,
+	journal = "Visual.ly",
+	language = "english",
+	title = "{Data Visualization Tools}",
+	type = "Electronic source",
+	url = "http://visual.ly/learn/data-visualization-tools"
 }
 
-@Book{7,
-  author      = "Cairo A.",
-  title       = "The functional art: an introduction to information graphics and visualization ",
-    publisher = "New rider",
-  address ="New York, USA",
-  year        = "2013",
-  pages        = "180-217",
-  language    = "english"
-}
-@INPROCEEDINGS{CoMa2003,
- author       = "S. Coppock and L. Mazlack",
- title        = "Rough sets used in the measurement of similarity of mixed mode data",
- booktitle    = "Proceedings of 22nd International Conference of the North American (NAFIPS-2003)",
- address      = "Chicago, USA",
- year         = "24--26 Jul 2003",
- pages        = "197--201",
- language     = "english"
+@book{7,
+	address = "New York, USA",
+	author = "Cairo A.",
+	language = "english",
+	pages = "180--217",
+	publisher = "New rider",
+	title = "The functional art: an introduction to information graphics and visualization",
+	year = "2013"
 }
 
-@misc{Asuncion+Newman:2007,
- author = "Asuncion, A. and Newman, D.J.",
- year = "2007",
- title = "{UCI} Machine Learning Repository",
- url = "http://archive.ics.uci.edu/ml/",
- institution = "University of California, Irvine, School of Information and Computer Sciences",
- language  = "english"
+@inproceedings{Ode2006,
+	author = "Martin Odersky",
+	booktitle = "In Proc. Joint Modular Languages Conference (2006), Springer LNCS",
+	language = "english",
+	pages = "4--22",
+	publisher = "Springer",
+	title = "Event-based Programming without Inversion of Control",
+	year = "2006"
 }
 
-
-@Book{Zah1999,
-  author    = "Загоруйко, Н.Г.",
-  title     = "Прикладные методы анализа данных и знаний",
-  publisher = "Новосибирск: ИМ СО РАН",
-  year      = 1999,
-  numpages  = 270,
-  language  = "russian"
+@book{GoPeBl2006,
+	author = "Brian Goetz and Tim Peierls and Joshua Bloch",
+	language = "english",
+	numpages = 384,
+	publisher = "Addison-Wesley Professional",
+	title = "Java Concurrency in Practice",
+	year = "2006"
 }
 
-
-@article{DeGh2008,
-  author    = {Dean, Jeffrey and Ghemawat, Sanjay},
-  title     = {MapReduce: simplified data processing on large clusters},
-  journal   = {Commun. ACM},
-  volume    = {51},
-  number    = {1},
-  year      = {2008},
-  issn      = {0001-0782},
-  pages     = {107--113},
-  doi       = {http://doi.acm.org/10.1145/1327452.1327492},
-  publisher = {ACM},
-  address   = {New York, NY, USA},
-  language     = "english"
+@book{ChGa2006,
+	author = "Christian Bauer and Gavin King",
+	language = "english",
+	numpages = 904,
+	publisher = "Manning Publications",
+	title = "Java Persistence with Hibernate",
+	year = "2006"
 }
 
-@INPROCEEDINGS{Ode2006,
-    author = {Martin Odersky},
-    title = {Event-based Programming without Inversion of Control},
-    booktitle = {In Proc. Joint Modular Languages Conference (2006), Springer LNCS},
-    year = {2006},
-    pages = {4--22},
-    publisher = {Springer},
-    language     = "english"
+@phdthesis{Fie2000,
+	address = "University of California, Irvine, USA",
+	author = "Roy T. Fielding",
+	language = "english",
+	title = "Architectural styles and the design of network-based software architectures",
+	type = "PhD Thesis",
+	url = "http://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm",
+	year = 2000
 }
 
-
-@INPROCEEDINGS{Ode2007,
-  author    = {Martin Odersky},
-  title     = {Actors that Unify Threads and Events},
-  booktitle = {In International Conference on Coordination Models and Languages, LNCS},
-  year      = {2007},
-  pages     = {171--190},
-  publisher = {Springer-Verlang},
-  language     = "english"
+@book{8,
+	author = "Benjamin B.",
+	location = "College Park",
+	pages = "340",
+	publisher = "Maryland",
+	title = "{The Craft of Information Visualization: Readings and Reflections}",
+	year = "2003"
 }
 
-@Book{OdSpVe2008,
-  author      = "Odersky, Martin and Spoon, Lex and Venners, Bill",
-  title       = "Programming in Scala: A Comprehensive Step-by-step Guide",
-  edition     = "1st",  
-  publisher   = "Artima Inc",
-  year        = "2008",
-  numpages    = 776,
-  language    = "english"
+@book{9,
+	author = "Owen Scott",
+	location = "Farnham",
+	pages = "234",
+	publisher = "Safary",
+	title = "{History of Visualization }",
+	year = "2010"
 }
 
-@Book{WaPa2009,
-  author      = "Wampler, Dean and Payne, Alex",
-  title       = "Programming Scala: Scalability = Functional Programming + Objects",
-  edition     = "1st",  
-  publisher   = "O'Reilly Media",
-  year        = "2009",
-  numpages    = 448,
-  language    = "english"
+@book{10,
+	author = "Cairo A.",
+	location = "USA",
+	pages = "217",
+	publisher = "Newrider",
+	title = "The functional art: an introduction to information graphics and visualization ",
+	year = "2013"
 }
 
-@Book{GoPeBl2006,
-  author      = "Goetz, Brian and Peierls, Tim and Bloch, Joshua",
-  title       = "Java Concurrency in Practice",  
-  publisher   = "Addison-Wesley Professional",
-  year        = "2006",
-  numpages    = 384,
-  language    = "english"
+@article{11,
+	booktitle = "{ Smashing magazine }",
+	title = "{Useful JavaScript libraries}",
+	type = "Electronic source",
+	url = "http://www.smashingmagazine.com/2009/03/02/40-stand-alone-javascript-libraries-for-specific-purposes"
 }
 
-@article{Cab1996,
-  author    = {McCabe, Thomas J.},
-  title     = {Cyclomatic Complexity and the Year 2000},
-  journal   = {IEEE Software},
-  volume    = {13},
-  number    = {3},
-  year      = {1996},
-  pages     = {115-117},
-  ee        = {http://www.computer.org:80/software/so1996/s3115abs.htm},
-  bibsource = {DBLP, http://dblp.uni-trier.de}
-}
-
-@Book{ChGa2006,
-  author      = "Bauer, Christian and King, Gavin",
-  title       = "Java Persistence with Hibernate",  
-  publisher   = "Manning Publications",
-  year        = "2006",
-  numpages    = 904,
-  language    = "english"
-}
-
-@PHDTHESIS{Fie2000,
-  author   = "Fielding, Roy T.",
-  title    = "Architectural styles and the design of network-based software architectures",
-  type     = "PhD Thesis",
-  address  = "University of California, Irvine, USA",
-  year     = 2000,
-  url      = {http://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm},
-  language = "english"
-}
