@@ -181,10 +181,13 @@
 
 % Зміст
 \setcounter{tocdepth}{2} % контролює рівень заголовків, які повинні відображатись у змісті
+\listoftables%Список таблиць 
+\nocite{*}
+\listoffigures%Список рисунків
+\nocite{*}
 \tableofcontents
 \nocite{*}
-%\listoftables 
-%\listoffigures
+
 
 \lstset{basicstyle=\footnotesize, language=Java,morekeywords={val,def,object}}
 
@@ -193,7 +196,7 @@
 \include{chapters/01-problem-overview/problem-overview}%                                Розділ 1
 \include{chapters/02-the-core/the-core}%                                                Розділ 2
 \include{chapters/03-software-and-experiments/software-and-experiments}%                Розділ 3
-\include{chapters/04-conclusion/conclusion}%                                            Висновки
-\include{chapters/05-bibliography/bibliography}%                                        Список використаних джерел (+список публікацій автора)
+%\include{chapters/04-conclusion/conclusion}%                                            %\Висновки
+\include{chapters/05-bibliography/bibliography}%                                        Список використаних джерел 
 
 \end{document}
