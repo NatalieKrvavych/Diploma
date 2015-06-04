@@ -176,6 +176,11 @@
 % Рік, коли написана (подана до захисту?) дисертація
 \date{2012}
 
+\newpage
+
+
+\newpage
+
 % Тут буде титульна сторінка
 \maketitle
 
@@ -196,7 +201,8 @@
 \include{chapters/01-problem-overview/problem-overview}%                                Розділ 1
 \include{chapters/02-the-core/the-core}%                                                Розділ 2
 \include{chapters/03-software-and-experiments/software-and-experiments}%                Розділ 3
-%\include{chapters/04-conclusion/conclusion}%                                            %\Висновки
-\include{chapters/05-bibliography/bibliography}%                                        Список використаних джерел 
+\include{chapters/04-program/program}
+\include{chapters/05-conclusion/conclusion}%                                            %\Висновки
+\include{chapters/06-bibliography/bibliography}%                                        Список використаних джерел 
 
 \end{document}
