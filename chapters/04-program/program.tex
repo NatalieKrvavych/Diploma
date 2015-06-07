@@ -14,7 +14,58 @@
 \subsection{Запуск програми. Вхідні та вихідні дані.}\hspace{\parindent}
 
 \section{Аналіз отриманих результатів}
+\subsection{Патерни для візуалізації}\hspace{\parindent}
 
+Для того щоб виконати візуалізацію даних, необхідно  щоб система яка буде виконувати дане завдання вирішувала такі проблеми:
+\begin{enumerate}
+\item[1.)]\textit{Інтерфейс.} Потрібно створити зручний для використання користувачем інтерфейс із продуманими усіма, потрібними для використання системи, можливостями. 
+\item[2.)]\textit{Взаємодія з користувачем.}Інтерактивність --- дуже важлива складова будь-якої візуалізації. Вона дозволяє збільшити функціональність системи та покращити зручність роботи для користувача.
+\item[3.)]\textit{Стратегія подання і відображення даних.} Для того щоб система була потрібною, їй необхідно володіти певною функціонально-запотребованою стратегією. 
+\end{enumerate}
+
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[scale=0.5]{chapters/04-program/images/figure.png}%
+    \caption{Ієрархія класу Figure}\label{fig:classFigure}
+  \end{figure}
+ 
+Для того щоб можна було відображати необхідні фігури, є потрібним клас Figure.
+На рис.~\ref{fig:classFigure} зображена ієрархія цього класу. Він має такі основні властивості, як: намалювати себе, визначення простору який заємає, та перетин із іншими об’єктами. В цього класу є наступні субкласи: Character, Ractangle, Circle, Polygon, Line and Icon. Усі вони перевизначають функції Draw() та Intersect().
+
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[scale=0.5]{chapters/04-program/images/monoFigure.png}%
+    \caption{Взаємозв’язок класу MonoFigure}\label{fig:classMonoFigure}
+  \end{figure}
+
+На рис.~\ref{fig:classMonoFigure} зображено взаємозв’язок класу MonoFigure.
+
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[scale=0.5]{chapters/04-program/images/compositor.png}%
+    \caption{Взаємозв’язок класів Compositor i Composition}\label{fig:classCompositor}
+  \end{figure}
+
+
+На рис.~\ref{fig:classCompositor} зображено взаємозв’язок класів Compositor i Composition.
+
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[scale=0.5]{chapters/04-program/images/decorator.png}%
+    \caption{Взаємозв’язок класу Decorator}\label{fig:classDecorator}
+  \end{figure}
+
+На рис.~\ref{fig:classDecorator} зображено взаємозв’язок класу Decorator.
+
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[scale=0.5]{chapters/04-program/images/strategy.png}%
+    \caption{Взаємозв’язок класу Strategy}\label{fig:classStrategy}
+  \end{figure}
+
+На рис.~\ref{fig:classStrategy} зображено взаємозв’язок класу Strategy.
+
+\subsection{Аналіз результату роботи системи}\hspace{\parindent}
 \section{Висновки до розділу~\ref{ch:04}}
 
 
