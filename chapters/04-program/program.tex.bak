@@ -6,15 +6,18 @@
 
 \subsection{Загальні відомості}\hspace{\parindent}
 
+Для написання даної програми були застосовані такі засоби: HTML5, CSS3, JavaScript, Polymer, GoogleMaps API, Inskape і платформа Trident Genesis.
+
+Програма складається із файлу з вихідним кодом --- map.html, вхфдного файлу array.json, та файлів .svg із зображеннями які використовуються в програмі. Загальний об’єм пам’яті який використовується --- 151,4 kB.
+
 
 \subsection{Функціональне призначення}\hspace{\parindent}
 
+Призначенням даної програми є надати візуальне проедставлення інформації про стан радарів авіакомпанії. Користувач може бачити розміщені на карті радари. Кожен радар має назву й інфовікно для відтворення детальної інформації. 
+
 \subsection{Описання логічної структури}\hspace{\parindent}
 
-\subsection{Запуск програми. Вхідні та вихідні дані.}\hspace{\parindent}
-
-\section{Аналіз отриманих результатів}
-\subsection{Патерни для візуалізації}\hspace{\parindent}
+\textbf{Патерни для візуалізації}
 
 Для того щоб виконати візуалізацію даних, необхідно  щоб система яка буде виконувати дане завдання вирішувала такі проблеми:
 \begin{enumerate}
@@ -23,52 +26,186 @@
 \item[3.)]\textit{Стратегія подання і відображення даних.} Для того щоб система була потрібною, їй необхідно володіти певною функціонально-запотребованою стратегією. 
 \end{enumerate}
 
+Для того щоб створити систему візуалізації даних, необхідна реалізація класів, за допомогою який можна вирішити вищезгадані проблеми. Ці класи є описані нижче.
+
 \begin{figure}[!htb]
     \centering
-    \includegraphics[scale=0.5]{chapters/04-program/images/figure.png}%
+    \includegraphics[scale=0.5]{chapters/04-program/images/figure.pdf}%
     \caption{Ієрархія класу Figure}\label{fig:classFigure}
   \end{figure}
  
 Для того щоб можна було відображати необхідні фігури, є потрібним клас Figure.
 На рис.~\ref{fig:classFigure} зображена ієрархія цього класу. Він має такі основні властивості, як: намалювати себе, визначення простору який заємає, та перетин із іншими об’єктами. В цього класу є наступні субкласи: Character, Ractangle, Circle, Polygon, Line and Icon. Усі вони перевизначають функції Draw() та Intersect().
 
+Субклас Rectangle перевизначає Draw() таким чином:
+\begin{lstlisting}
+void Rectangle::Draw (Window* w) {
+w->DrawRect(_x0, _y0, _x1, _y1);
+}
+\end{lstlisting}
+
+
+де x0, y0, x1 і y1 є аргументами даної функції, які визначають два протилежні кути прямокутника. DrawRect --- це операція, яка малює прямокутник на екрані.
+
+Для того щоб прикрасити фігури, або щоб можна було утворювати композицію кількох фігур потрібен клас MonoFigure. На рис.~\ref{fig:classMonoFigure} зображено взаємозв’язок класу MonoFigure.
+
 \begin{figure}[!htb]
     \centering
-    \includegraphics[scale=0.5]{chapters/04-program/images/monoFigure.png}%
+    \includegraphics[scale=0.5]{chapters/04-program/images/monoFigure.pdf}%
     \caption{Взаємозв’язок класу MonoFigure}\label{fig:classMonoFigure}
   \end{figure}
 
-На рис.~\ref{fig:classMonoFigure} зображено взаємозв’язок класу MonoFigure.
+Цей клас реалізує операцію Draw() таким чином:
+\begin{lstlisting}
+void MonoFigure::Draw (Window* w) {
+_component->Draw(w);
+}
+\end{lstlisting}
 
+
+\cite{patterns1}Ми визначили клас Compositor  для об'єктів, які можуть iнкапсулировати форматування алгоритму. Інтерфейс яким чином виконувати форматування і саме. На рис.~\ref{fig:classCompositor} зображено взаємозв’язок класів Compositor i Composition. 
 \begin{figure}[!htb]
     \centering
-    \includegraphics[scale=0.5]{chapters/04-program/images/compositor.png}%
+    \includegraphics[scale=0.5]{chapters/04-program/images/compositor.pdf}%
     \caption{Взаємозв’язок класів Compositor i Composition}\label{fig:classCompositor}
   \end{figure}
 
 
-На рис.~\ref{fig:classCompositor} зображено взаємозв’язок класів Compositor i Composition.
-
-\begin{figure}[!htb]
-    \centering
-    \includegraphics[scale=0.5]{chapters/04-program/images/decorator.png}%
-    \caption{Взаємозв’язок класу Decorator}\label{fig:classDecorator}
-  \end{figure}
-
+Модель класу Decorator фіксує відносини класів і об'єктів, які підтримують елементи декору з прозорим терміном "додатки". Цей клас може
+ширше значення, ніж те, що ми розглянете у цій роботі. У структурі Decorator,
+додатки ставляться до всього, що додає відповідальності до об'єкту. Ми можемо, наприклад, прикрашати абстрактне синтаксичне дерево з семантичними діями,
+кінцевий автомат з новими переходами, для мережі стійких об'єктів
+з тегами атрибутів. Декоратор узагальнює цей підхід. 
 На рис.~\ref{fig:classDecorator} зображено взаємозв’язок класу Decorator.
 
 \begin{figure}[!htb]
     \centering
-    \includegraphics[scale=0.5]{chapters/04-program/images/strategy.png}%
-    \caption{Взаємозв’язок класу Strategy}\label{fig:classStrategy}
+    \includegraphics[scale=0.5]{chapters/04-program/images/decorator.pdf}%
+    \caption{Взаємозв’язок класу Decorator}\label{fig:classDecorator}
   \end{figure}
+
+
+Інкапсуляція об'єктів в алгоритмі є ціллю моделі класу Strategy.
+Ключовими учасниками в структурі є об'єктами стратегії (яка інкапсулює
+різні алгоритми) і контексту, в якому вони працюють. 
+
+Мтою застосування класу Strategy є розробка інтерфейсів стратегії
+і їх контекст, що є досить загальним підтриманням алгоритмів. У даному прикладі, базова підтримка інтерфейсу Figure для доступу,
+вставки і видалення достатньо, змінити підклас Compositor. Вцілому
+фізична структура об’єкта, незалежно від алгоритму використовує список завдань для нього.
 
 На рис.~\ref{fig:classStrategy} зображено взаємозв’язок класу Strategy.
 
-\subsection{Аналіз результату роботи системи}\hspace{\parindent}
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[scale=0.5]{chapters/04-program/images/strategy.pdf}%
+    \caption{Взаємозв’язок класу Strategy}\label{fig:classStrategy}
+  \end{figure}
+
+
+\subsection{Запуск програми. Вхідні та вихідні дані.}\hspace{\parindent}
+
+Для того щоб запустити дану програму необхідно спочатку підключитись до SimpleHTTPServer.
+
+Модуль SimpleHTTPServer поставляється з Python  і є простим HTTP-сервером, який забезпечує стандартний GET і обробку запитів.
+
+Щоб підєднатись до HTTP-сервера на порту 8000 (порт, який є за замовчуванням), простого необхідно ввести в командній стрічці:
+\begin{lstlisting}
+python -m SimpleHTTPServer [port]
+\end{lstlisting}
+
+Після того як відбулося підключення до SimpleHTTPServer, треба відкрити файл map.html у будь-якому браузері через порт до якого відбулося підключення.
+
+Вхідними даними для програми є файл JSON із даними про радари. Вони представлені в такому вигляді:
+\begin{lstlisting}
+ var radars = [
+           ['A', -45.67548, 168.70605, 'on', 80, 100],
+           ['B', -44.02442, 171.29883, 'broken', 50, 10],
+           ['C', -39.53794, 174.68262, 'off', 100, 100],
+           ['E', -38.51379, 177.36238, 'broken', 78, 95],
+           ['F', -41.705373, 172.35352, 'on', 80, 100],
+           ['D', -35.69299, 174.06738, 'on', 70, 100]
+  ];
+\end{lstlisting}, 
+де перше значення --- це назва радара, наступні два --- горгафічне положення, далі технічний статус, радіус дії та відсоток виконання ремонту.
+
+\section{Аналіз отриманих результатів}
+
+Дана інформаційна система створена з метою візуального представлення радарів на карті для відображення їх технічного стану. 
+Першим що бачить користувач є карта із розміщеними радарами. На рис.~\ref{fig:first} зображено загальне відображення даних.
+
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[scale=0.5]{chapters/04-program/images/1.png}%
+    \caption{Відображення радарів на карті}\label{fig:first}
+  \end{figure}
+  
+Для того щоб користувач міг бачити технічний стан радарів, їхні іконки є забарвлені в різні кольори. Радари які працюють також доповнюються анімованими колами. 
+
+
+В лівому куті вікна знаходиться меню і прокрутка з можливістю масштабування карти  та зміни положення. На рис.~\ref{fig:second} зображено загальне відображення даних.
+
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[scale=0.5]{chapters/04-program/images/2.png}%
+    \caption{Меню програми}\label{fig:second}
+  \end{figure}
+
+Кожна кнопка меню має інтуїтивно зрозумілу іконку та додатково принаведенні курсором з’являється напис із її функціональним призначенням, як зображено на рис.~\ref{fig:ершкв}.
+
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[scale=0.5]{chapters/04-program/images/8.png}%
+    \caption{Кнопки меню}\label{fig:ершкв}
+  \end{figure}
+
+
+Кожен радар має своє інфовікно в якому є детальніша текстова інформація. Для того щоб відкрити його, необхідно натиснути на радар. При необхідності його можна закрити, чи відкрити знову. Інфовікно одного із радарів зображене на рис.~\ref{fig:four}.
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[scale=0.5]{chapters/04-program/images/3.png}%
+    \caption{Інфовікно радара}\label{fig:four}
+  \end{figure}
+  
+Якщо користувач хоче побачити графічне відображення радіусів дії радарів, воно виглядатиме таким чином: рис.~\ref{fig:five}.
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[scale=0.5]{chapters/04-program/images/4.png}%
+    \caption{Радіуси дії радарів}\label{fig:five}
+  \end{figure}
+  
+ Також є можливість ереглянути радіуси дії лише радарів які працюють рис.~\ref{fig:five}, та "невидиму" для радарів область рис.~\ref{fig:five}.
+ 
+ \begin{figure}[!htb]
+    \centering
+    \includegraphics[scale=0.5]{chapters/04-program/images/5.png}%
+    \caption{Радіуси дії ввімкнених радарів}\label{fig:six}
+  \end{figure}
+  
+  \begin{figure}[!htb]
+    \centering
+    \includegraphics[scale=0.5]{chapters/04-program/images/7.png}%
+    \caption{"Невидима" для радарів область}\label{fig:seven}
+  \end{figure}
+
+Якщо радари є несправними, користувач може переглянути прогрес виконання ремонтних робіт, як зображено на рис.~\ref{fig:nine}. 
+
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[scale=0.5]{chapters/04-program/images/9.png}%
+    \caption{Прогрес виконання ремонту}\label{fig:nine}
+  \end{figure}
+  
+ Користувач при потребі може поміняти вигляд карти, а також можна вимкнути надписи для позначення географічних одиниць. Заміна карти зображена на рис.~\ref{fig:nine}.
+ 
+ \begin{figure}[!htb]
+    \centering
+    \includegraphics[scale=0.5]{chapters/04-program/images/10.png}%
+    \caption{Прогрес виконання ремонту}\label{fig:ten}
+  \end{figure}
+ 
+
 \section{Висновки до розділу~\ref{ch:04}}
-
-
 При цьому було отримано такі наукові результати.
 \begin{enumerate}
  \item що, яким чином і який ефект було досягнуто;
