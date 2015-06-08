@@ -6,15 +6,18 @@
 
 \subsection{Загальні відомості}\hspace{\parindent}
 
+Для написання даної програми були застосовані такі засоби: HTML5, CSS3, JavaScript, Polymer, GoogleMaps API, Inskape і платформа Trident Genesis.
+
+Програма складається із файлу з вихідним кодом --- map.html, вхфдного файлу array.json, та файлів .svg із зображеннями які використовуються в програмі. Загальний об’єм пам’яті який використовується --- 151,4 kB.
+
 
 \subsection{Функціональне призначення}\hspace{\parindent}
 
+Призначенням даної програми є надати візуальне проедставлення інформації про стан радарів авіакомпанії. Користувач може бачити розміщені на карті радари. Кожен радар має назву й інфовікно для відтворення детальної інформації. 
+
 \subsection{Описання логічної структури}\hspace{\parindent}
 
-\subsection{Запуск програми. Вхідні та вихідні дані.}\hspace{\parindent}
-
-\section{Аналіз отриманих результатів}
-\subsection{Патерни для візуалізації}\hspace{\parindent}
+\textbf{Патерни для візуалізації}
 
 Для того щоб виконати візуалізацію даних, необхідно  щоб система яка буде виконувати дане завдання вирішувала такі проблеми:
 \begin{enumerate}
@@ -23,49 +26,91 @@
 \item[3.)]\textit{Стратегія подання і відображення даних.} Для того щоб система була потрібною, їй необхідно володіти певною функціонально-запотребованою стратегією. 
 \end{enumerate}
 
+Для того щоб створити систему візуалізації даних, необхідна реалізація класів, за допомогою який можна вирішити вищезгадані проблеми. Ці класи є описані нижче.
+
 \begin{figure}[!htb]
     \centering
-    \includegraphics[scale=0.5]{chapters/04-program/images/figure.png}%
+    \includegraphics[scale=0.5]{chapters/04-program/images/figure.pdf}%
     \caption{Ієрархія класу Figure}\label{fig:classFigure}
   \end{figure}
  
 Для того щоб можна було відображати необхідні фігури, є потрібним клас Figure.
 На рис.~\ref{fig:classFigure} зображена ієрархія цього класу. Він має такі основні властивості, як: намалювати себе, визначення простору який заємає, та перетин із іншими об’єктами. В цього класу є наступні субкласи: Character, Ractangle, Circle, Polygon, Line and Icon. Усі вони перевизначають функції Draw() та Intersect().
 
+Субклас Rectangle перевизначає Draw() таким чином:
+\begin{lstlisting}
+void Rectangle::Draw (Window* w) {
+w->DrawRect(_x0, _y0, _x1, _y1);
+}
+\end{lstlisting}
+
+
+де x0, y0, x1 і y1 є аргументами даної функції, які визначають два протилежні кути прямокутника. DrawRect --- це операція, яка малює прямокутник на екрані.
+
+Для того щоб прикрасити фігури, або щоб можна було утворювати композицію кількох фігур потрібен клас MonoFigure. На рис.~\ref{fig:classMonoFigure} зображено взаємозв’язок класу MonoFigure.
+
 \begin{figure}[!htb]
     \centering
-    \includegraphics[scale=0.5]{chapters/04-program/images/monoFigure.png}%
+    \includegraphics[scale=0.5]{chapters/04-program/images/monoFigure.pdf}%
     \caption{Взаємозв’язок класу MonoFigure}\label{fig:classMonoFigure}
   \end{figure}
 
-На рис.~\ref{fig:classMonoFigure} зображено взаємозв’язок класу MonoFigure.
+Цей клас реалізує операцію Draw() таким чином:
+\begin{lstlisting}
+void MonoFigure::Draw (Window* w) {
+_component->Draw(w);
+}
+\end{lstlisting}
 
+
+Ми визначили клас Compositor  для об'єктів, які можуть iнкапсулировати форматування алгоритму. Інтерфейс яким чином виконувати форматування і саме. На рис.~\ref{fig:classCompositor} зображено взаємозв’язок класів Compositor i Composition. 
 \begin{figure}[!htb]
     \centering
-    \includegraphics[scale=0.5]{chapters/04-program/images/compositor.png}%
+    \includegraphics[scale=0.5]{chapters/04-program/images/compositor.pdf}%
     \caption{Взаємозв’язок класів Compositor i Composition}\label{fig:classCompositor}
   \end{figure}
 
 
-На рис.~\ref{fig:classCompositor} зображено взаємозв’язок класів Compositor i Composition.
-
-\begin{figure}[!htb]
-    \centering
-    \includegraphics[scale=0.5]{chapters/04-program/images/decorator.png}%
-    \caption{Взаємозв’язок класу Decorator}\label{fig:classDecorator}
-  \end{figure}
-
+Модель класу Decorator фіксує відносини класів і об'єктів, які підтримують елементи декору з прозорим терміном "додатки". Цей клас може
+ширше значення, ніж те, що ми розглянете у цій роботі. У структурі Decorator,
+додатки ставляться до всього, що додає відповідальності до об'єкту. Ми можемо, наприклад, прикрашати абстрактне синтаксичне дерево з семантичними діями,
+кінцевий автомат з новими переходами, для мережі стійких об'єктів
+з тегами атрибутів. Декоратор узагальнює цей підхід. 
 На рис.~\ref{fig:classDecorator} зображено взаємозв’язок класу Decorator.
 
 \begin{figure}[!htb]
     \centering
-    \includegraphics[scale=0.5]{chapters/04-program/images/strategy.png}%
-    \caption{Взаємозв’язок класу Strategy}\label{fig:classStrategy}
+    \includegraphics[scale=0.5]{chapters/04-program/images/decorator.pdf}%
+    \caption{Взаємозв’язок класу Decorator}\label{fig:classDecorator}
   \end{figure}
+
+
+Інкапсуляція об'єктів в алгоритмі є ціллю моделі класу Strategy.
+Ключовими учасниками в структурі є об'єктами стратегії (яка інкапсулює
+різні алгоритми) і контексту, в якому вони працюють. 
+
+Мтою застосування класу Strategy є розробка інтерфейсів стратегії
+і їх контекст, що є досить загальним підтриманням алгоритмів. У даному прикладі, базова підтримка інтерфейсу Figure для доступу,
+вставки і видалення достатньо, змінити підклас Compositor. Вцілому
+фізична структура об’єкта, незалежно від алгоритму використовує список завдань для нього.
 
 На рис.~\ref{fig:classStrategy} зображено взаємозв’язок класу Strategy.
 
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[scale=0.5]{chapters/04-program/images/strategy.pdf}%
+    \caption{Взаємозв’язок класу Strategy}\label{fig:classStrategy}
+  \end{figure}
+
+
+
+\subsection{Запуск програми. Вхідні та вихідні дані.}\hspace{\parindent}
+
+\section{Аналіз отриманих результатів}
+
+
 \subsection{Аналіз результату роботи системи}\hspace{\parindent}
+
 \section{Висновки до розділу~\ref{ch:04}}
 
 

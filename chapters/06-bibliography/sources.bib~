@@ -6,7 +6,7 @@
 	language = "english",
 	numpages = 350,
 	publisher = "Springer US",
-	title = "Interactive and Dynamic Graphics for Data Analysis",
+	title = "{Interactive and Dynamic Graphics for Data Analysis}",
 	year = 2007
 }
 
@@ -16,24 +16,24 @@
 	language = "english",
 	numpages = 352,
 	publisher = "Tailor\&Francis Group",
-	title = "Human-Computer Interaction",
+	title = "{Human-Computer Interaction}",
 	year = "2009"
 }
 
 @book{3,
 	address = "New York, USA",
 	author = "Alan Dix",
-	booktitle = "Encyclopedia of Database Systems",
+	booktitle = "{Encyclopedia of Database Systems}",
 	language = "english",
 	pages = "1327--1331",
 	publisher = "Springer US",
-	title = "Human-Computer Interaction",
+	title = "{Human-Computer Interaction}",
 	year = "2009"
 }
 
 @phdthesis{4,
 	language = "english",
-	title = "Wind map",
+	title = "{Wind map}",
 	type = "Electronic source",
 	url = "http://hint.fm/wind/"
 }
@@ -45,7 +45,7 @@
 	journal = "ACM SIGGRAPH",
 	number = "3",
 	pages = "115--117",
-	title = "History of Visualization",
+	title = "{History of Visualization}",
 	volume = "13",
 	year = "1999"
 }
@@ -64,17 +64,17 @@
 	language = "english",
 	pages = "180--217",
 	publisher = "New rider",
-	title = "The functional art: an introduction to information graphics and visualization",
+	title = "{The functional art: an introduction to information graphics and visualization}",
 	year = "2013"
 }
 
 @inproceedings{Ode2006,
 	author = "Martin Odersky",
-	booktitle = "In Proc. Joint Modular Languages Conference (2006), Springer LNCS",
+	booktitle = "{In Proc. Joint Modular Languages Conference (2006), Springer LNCS}",
 	language = "english",
 	pages = "4--22",
 	publisher = "Springer",
-	title = "Event-based Programming without Inversion of Control",
+	title = "{Event-based Programming without Inversion of Control}",
 	year = "2006"
 }
 
@@ -83,7 +83,7 @@
 	language = "english",
 	numpages = 384,
 	publisher = "Addison-Wesley Professional",
-	title = "Java Concurrency in Practice",
+	title = "{Java Concurrency in Practice}",
 	year = "2006"
 }
 
@@ -92,7 +92,7 @@
 	language = "english",
 	numpages = 904,
 	publisher = "Manning Publications",
-	title = "Java Persistence with Hibernate",
+	title = "{Java Persistence with Hibernate}",
 	year = "2006"
 }
 
@@ -100,7 +100,7 @@
 	address = "University of California, Irvine, USA",
 	author = "Roy T. Fielding",
 	language = "english",
-	title = "Architectural styles and the design of network-based software architectures",
+	title = "{Architectural styles and the design of network-based software architectures}",
 	type = "PhD Thesis",
 	url = "http://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm",
 	year = 2000
@@ -115,21 +115,12 @@
 	year = "2003"
 }
 
-@book{9,
-	author = "Owen Scott",
-	location = "Farnham",
-	pages = "234",
-	publisher = "Safary",
-	title = "{History of Visualization }",
-	year = "2010"
-}
-
 @book{10,
 	author = "Cairo A.",
 	location = "USA",
 	pages = "217",
 	publisher = "Newrider",
-	title = "The functional art: an introduction to information graphics and visualization ",
+	title = "{The functional art: an introduction to information graphics and visualization}",
 	year = "2013"
 }
 
@@ -138,5 +129,92 @@
 	title = "{Useful JavaScript libraries}",
 	type = "Electronic source",
 	url = "http://www.smashingmagazine.com/2009/03/02/40-stand-alone-javascript-libraries-for-specific-purposes"
+}
+
+@article{ruby,
+	title = "{Ruby}",
+	type = "Electronic source",
+	url = "https://www.ruby-lang.org/en"
+}
+
+@book{phyton,
+	author = "David Beazley and Brian K. Jones.",
+	edition = "3rd Edition",
+	month = may,
+	pages = "706",
+	publisher = "O{\rq}Reilly Media",
+	title = "{Python Cookbook}",
+	year = "2013"
+}
+
+@article{google,
+	title = "{Google Developers}",
+	type = "Electronic source",
+	url = "https://developers.google.com"
+}
+
+@article{leaflet,
+	title = "{Leaflet}",
+	type = "Electronic sourceb",
+	url = "http://leafletjs.com"
+}
+
+@book{tufte,
+	address = "Connecticut",
+	author = "Edward Tufte",
+	edition = "Second edition",
+	location = "USA",
+	pages = "1--106",
+	publisher = "Graphics Press",
+	title = "{The Visual Display of Quantitative Information}",
+	year = "2001"
+}
+
+@book{12,
+	address = "California",
+	author = "Jaques Bertin",
+	edition = "First edition",
+	location = "USA",
+	pages = "15--34",
+	publisher = "Esri",
+	title = "{Semiology of graphics, diagrams, networks, maps}",
+	year = "2011"
+}
+
+@book{patterns1,
+	author = "Allen Holub",
+	booktitle = "{Holub on Patterns: learning design patterns by looking at code.}",
+	location = "New Yourk",
+	pages = "1--34",
+	publisher = "apress",
+	year = "2004"
+}
+
+@book{patterns2,
+	author = "Martin Fowler",
+	booktitle = "{Patterns of enterprise application architecture}",
+	location = "Boston",
+	pages = "107-138",
+	publisher = "Addison-Wesley ",
+	year = "2003"
+}
+
+@book{patterns3,
+	author = "Joshua Kerievsky",
+	location = "Boston",
+	pages = "23-33",
+	publisher = "Addison-Wesley",
+	title = "{Refactoring to patterns}",
+	year = "2010"
+}
+
+@book{patterns4,
+	author = "Richard Helm Ralph Johnson John Vlissides {Erich Gamma}",
+	edition = "37-th printing",
+	location = "Westford",
+	pages = "46-249",
+	publisher = "Addison-Wesley ",
+	title = "{Design patterns. Elements of reusable Object-Oriented Software.}",
+	year = "2009"
 }
 
