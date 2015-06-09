@@ -63,7 +63,7 @@ _component->Draw(w);
 \end{lstlisting}
 
 
-\cite{patterns1}Ми визначили клас Compositor  для об'єктів, які можуть iнкапсулировати форматування алгоритму. Інтерфейс яким чином виконувати форматування і саме. На рис.~\ref{fig:classCompositor} зображено взаємозв’язок класів Compositor i Composition. 
+Ми визначили клас Compositor  для об'єктів, які можуть iнкапсулировати форматування алгоритму. Інтерфейс яким чином виконувати форматування і саме. На рис.~\ref{fig:classCompositor} зображено взаємозв’язок класів Compositor i Composition. 
 \begin{figure}[!htb]
     \centering
     \includegraphics[scale=0.5]{chapters/04-program/images/compositor.pdf}%
@@ -102,7 +102,7 @@ _component->Draw(w);
     \caption{Взаємозв’язок класу Strategy}\label{fig:classStrategy}
   \end{figure}
 
-
+\clearpage
 \subsection{Запуск програми. Вхідні та вихідні дані.}\hspace{\parindent}
 
 Для того щоб запустити дану програму необхідно спочатку підключитись до SimpleHTTPServer.
@@ -127,7 +127,7 @@ python -m SimpleHTTPServer [port]
            ['D', -35.69299, 174.06738, 'on', 70, 100]
   ];
 \end{lstlisting}
-де перше значення --- це назва радара, наступні два --- горгафічне положення, далі технічний статус, радіус дії та відсоток виконання ремонту.
+де перше значення --- це назва радара, наступні два --- геогафічне положення, далі технічний статус, радіус дії та відсоток виконання ремонту.
 
 Вихідна інформація в даній програмі --- це візуальне представлення інформації, яке отримує користувач.
 \section{Аналіз отриманих результатів}
@@ -171,12 +171,12 @@ python -m SimpleHTTPServer [port]
 Якщо користувач хоче побачити графічне відображення радіусів дії радарів, воно виглядатиме таким чином: рис.~\ref{fig:five}.
 \begin{figure}[!htb]
     \centering
-    \includegraphics[scale=0.25]{chapters/04-program/images/4.png}%
+    \includegraphics[scale=0.35]{chapters/04-program/images/4.png}%
     \caption{Радіуси дії радарів}\label{fig:five}
   \end{figure}
-  \clearpage
   
- Також є можливість ереглянути радіуси дії лише радарів які працюють рис.~\ref{fig:five}, та "невидиму" для радарів область рис.~\ref{fig:five}.
+  
+ Також є можливість переглянути радіуси дії лише радарів які працюють рис.~\ref{fig:five}, та "невидиму" для радарів область рис.~\ref{fig:five}.
  
  
  \begin{figure}[!htb]
@@ -195,7 +195,7 @@ python -m SimpleHTTPServer [port]
 
 \begin{figure}[!htb]
     \centering
-    \includegraphics[scale=0.3]{chapters/04-program/images/9.png}%
+    \includegraphics[scale=0.5]{chapters/04-program/images/9.png}%
     \caption{Прогрес виконання ремонту}\label{fig:nine}
   \end{figure}
   
@@ -203,7 +203,7 @@ python -m SimpleHTTPServer [port]
  
  \begin{figure}[!htb]
     \centering
-    \includegraphics[scale=0.5]{chapters/04-program/images/10.png}%
+    \includegraphics[scale=0.6]{chapters/04-program/images/10.png}%
     \caption{Зміна вигляду карти}\label{fig:ten}
   \end{figure}
    \clearpage
