@@ -8,7 +8,7 @@
 
 Для написання даної програми були застосовані такі засоби: HTML5, CSS3, JavaScript, Polymer, GoogleMaps API, Inskape і платформа Trident Genesis.
 
-Програма складається із файлу з вихідним кодом --- map.html, вхфдного файлу array.json, та файлів .svg із зображеннями які використовуються в програмі. Загальний об’єм пам’яті який використовується --- 151,4 kB.
+Програма складається із файлу з вихідним кодом --- map.html, вхідного файлу array.json, та файлів .svg із зображеннями які використовуються в програмі. Загальний об’єм пам’яті який використовується --- 151,4 kB.
 
 
 \subsection{Функціональне призначення}\hspace{\parindent}
@@ -118,7 +118,7 @@ python -m SimpleHTTPServer [port]
 
 Вхідними даними для програми є файл JSON із даними про радари. Вони представлені в такому вигляді:
 \begin{lstlisting}
- var radars = [
+  radars = [
            ['A', -45.67548, 168.70605, 'on', 80, 100],
            ['B', -44.02442, 171.29883, 'broken', 50, 10],
            ['C', -39.53794, 174.68262, 'off', 100, 100],
@@ -126,7 +126,7 @@ python -m SimpleHTTPServer [port]
            ['F', -41.705373, 172.35352, 'on', 80, 100],
            ['D', -35.69299, 174.06738, 'on', 70, 100]
   ];
-\end{lstlisting}, 
+\end{lstlisting}
 де перше значення --- це назва радара, наступні два --- горгафічне положення, далі технічний статус, радіус дії та відсоток виконання ремонту.
 
 Вихідна інформація в даній програмі --- це візуальне представлення інформації, яке отримує користувач.
@@ -137,7 +137,7 @@ python -m SimpleHTTPServer [port]
 
 \begin{figure}[!htb]
     \centering
-    \includegraphics[scale=0.5]{chapters/04-program/images/1.png}%
+    \includegraphics[scale=0.3]{chapters/04-program/images/1.png}%
     \caption{Відображення радарів на карті}\label{fig:first}
   \end{figure}
   
@@ -152,40 +152,42 @@ python -m SimpleHTTPServer [port]
     \caption{Меню програми}\label{fig:second}
   \end{figure}
 
-Кожна кнопка меню має інтуїтивно зрозумілу іконку та додатково принаведенні курсором з’являється напис із її функціональним призначенням, як зображено на рис.~\ref{fig:ершкв}.
+Кожна кнопка меню має інтуїтивно зрозумілу іконку та додатково принаведенні курсором з’являється напис із її функціональним призначенням, як зображено на рис.~\ref{fig:third}.
 
 \begin{figure}[!htb]
     \centering
     \includegraphics[scale=0.5]{chapters/04-program/images/8.png}%
-    \caption{Кнопки меню}\label{fig:ершкв}
+    \caption{Кнопки меню}\label{fig:third}
   \end{figure}
 
 
 Кожен радар має своє інфовікно в якому є детальніша текстова інформація. Для того щоб відкрити його, необхідно натиснути на радар. При необхідності його можна закрити, чи відкрити знову. Інфовікно одного із радарів зображене на рис.~\ref{fig:four}.
 \begin{figure}[!htb]
     \centering
-    \includegraphics[scale=0.5]{chapters/04-program/images/3.png}%
+    \includegraphics[scale=0.3]{chapters/04-program/images/3.png}%
     \caption{Інфовікно радара}\label{fig:four}
   \end{figure}
   
 Якщо користувач хоче побачити графічне відображення радіусів дії радарів, воно виглядатиме таким чином: рис.~\ref{fig:five}.
 \begin{figure}[!htb]
     \centering
-    \includegraphics[scale=0.5]{chapters/04-program/images/4.png}%
+    \includegraphics[scale=0.25]{chapters/04-program/images/4.png}%
     \caption{Радіуси дії радарів}\label{fig:five}
   \end{figure}
+  \clearpage
   
  Також є можливість ереглянути радіуси дії лише радарів які працюють рис.~\ref{fig:five}, та "невидиму" для радарів область рис.~\ref{fig:five}.
  
+ 
  \begin{figure}[!htb]
     \centering
-    \includegraphics[scale=0.5]{chapters/04-program/images/5.png}%
+    \includegraphics[scale=0.3]{chapters/04-program/images/5.png}%
     \caption{Радіуси дії ввімкнених радарів}\label{fig:six}
   \end{figure}
   
   \begin{figure}[!htb]
     \centering
-    \includegraphics[scale=0.5]{chapters/04-program/images/7.png}%
+    \includegraphics[scale=0.3]{chapters/04-program/images/7.png}%
     \caption{"Невидима" для радарів область}\label{fig:seven}
   \end{figure}
 
@@ -193,7 +195,7 @@ python -m SimpleHTTPServer [port]
 
 \begin{figure}[!htb]
     \centering
-    \includegraphics[scale=0.5]{chapters/04-program/images/9.png}%
+    \includegraphics[scale=0.3]{chapters/04-program/images/9.png}%
     \caption{Прогрес виконання ремонту}\label{fig:nine}
   \end{figure}
   
@@ -202,8 +204,9 @@ python -m SimpleHTTPServer [port]
  \begin{figure}[!htb]
     \centering
     \includegraphics[scale=0.5]{chapters/04-program/images/10.png}%
-    \caption{Прогрес виконання ремонту}\label{fig:ten}
+    \caption{Зміна вигляду карти}\label{fig:ten}
   \end{figure}
+   \clearpage
  
 
 \section{Висновки до розділу~\ref{ch:04}}
