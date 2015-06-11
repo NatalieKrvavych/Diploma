@@ -168,28 +168,30 @@
 % Спеціальність
 %\speciality{01.05.03}[технічних наук]
 % Варіант із вказуванням факультативних аргументів
+\newpage
 \speciality{01.05.03}
 % Індекс за УДК
 \udc{004.853+004.855.5}
 % Установа, де виконана робота, і місто
 \institution{НУ ``Львівська політехніка''}{Львів}
+\newpage
 % Рік, коли написана (подана до захисту?) дисертація
 \date{2012}
 
-\newpage
-
-
-\newpage
 
 % Тут буде титульна сторінка
 \maketitle
+New page
+\newpage
+New page
+\newpage
 
 % Зміст
 \setcounter{tocdepth}{2} % контролює рівень заголовків, які повинні відображатись у змісті
 
+
 \tableofcontents
 \nocite{*}
-
 
 \lstset{basicstyle=\footnotesize, language=Java,morekeywords={val,def,object}}
 
