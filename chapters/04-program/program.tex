@@ -47,12 +47,12 @@ w->DrawRect(_x0, _y0, _x1, _y1);
 
 де x0, y0, x1 і y1 є аргументами даної функції, які визначають два протилежні кути прямокутника. DrawRect --- це операція, яка малює прямокутник на екрані.
 
-Для того щоб прикрасити фігури, або щоб можна було утворювати композицію кількох фігур потрібен клас MonoFigure. На рис.~\ref{fig:classMonoFigure} зображено взаємозв’язок класу MonoFigure.
+Для того щоб прикрасити фігури, або щоб можна було утворювати композицію кількох фігур потрібен клас MonoFigure. На рис.~\ref{fig:classMonoFigure} зображена ієрархія класу MonoFigure.
 
 \begin{figure}[!htb]
     \centering
     \includegraphics[scale=0.5]{chapters/04-program/images/monoFigure.pdf}%
-    \caption{Взаємозв’язок класу MonoFigure}\label{fig:classMonoFigure}
+    \caption{Ієрархія класу MonoFigure}\label{fig:classMonoFigure}
   \end{figure}
 
 Цей клас реалізує операцію Draw() таким чином:
@@ -76,12 +76,12 @@ _component->Draw(w);
 додатки ставляться до всього, що додає відповідальності до об'єкту. Ми можемо, наприклад, прикрашати абстрактне синтаксичне дерево з семантичними діями,
 кінцевий автомат з новими переходами, для мережі стійких об'єктів
 з тегами атрибутів. Декоратор узагальнює цей підхід. 
-На рис.~\ref{fig:classDecorator} зображено взаємозв’язок класу Decorator.
+На рис.~\ref{fig:classDecorator} зображена ієрархія класу Decorator.
 
 \begin{figure}[!htb]
     \centering
-    \includegraphics[scale=0.5]{chapters/04-program/images/decorator.pdf}%
-    \caption{Взаємозв’язок класу Decorator}\label{fig:classDecorator}
+    \includegraphics[scale=0.4]{chapters/04-program/images/decorator.pdf}%
+    \caption{Ієрархія класу Decorator}\label{fig:classDecorator}
   \end{figure}
 
 
@@ -89,17 +89,17 @@ _component->Draw(w);
 Ключовими учасниками в структурі є об'єктами стратегії (яка інкапсулює
 різні алгоритми) і контексту, в якому вони працюють. 
 
-Мтою застосування класу Strategy є розробка інтерфейсів стратегії
+Метою застосування класу Strategy є розробка інтерфейсів стратегії
 і їх контекст, що є досить загальним підтриманням алгоритмів. У даному прикладі, базова підтримка інтерфейсу Figure для доступу,
 вставки і видалення достатньо, змінити підклас Compositor. Вцілому
 фізична структура об’єкта, незалежно від алгоритму використовує список завдань для нього.
 
-На рис.~\ref{fig:classStrategy} зображено взаємозв’язок класу Strategy.
+На рис.~\ref{fig:classStrategy} зображеноа ієрархія класу Strategy.
 
 \begin{figure}[!htb]
     \centering
-    \includegraphics[scale=0.5]{chapters/04-program/images/strategy.pdf}%
-    \caption{Взаємозв’язок класу Strategy}\label{fig:classStrategy}
+    \includegraphics[scale=0.4]{chapters/04-program/images/strategy.pdf}%
+    \caption{Ієрархія класу Strategy}\label{fig:classStrategy}
   \end{figure}
 
 \clearpage
@@ -127,7 +127,7 @@ python -m SimpleHTTPServer [port]
            ['D', -35.69299, 174.06738, 'on', 70, 100]
   ];
 \end{lstlisting}
-де перше значення --- це назва радара, наступні два --- геогафічне положення, далі технічний статус, радіус дії та відсоток виконання ремонту.
+де перше значення --- це назва радара, наступні два --- географічне положення, далі технічний статус, радіус дії та відсоток виконання ремонту.
 
 Вихідна інформація в даній програмі --- це візуальне представлення інформації, яке отримує користувач.
 \section{Аналіз отриманих результатів}
